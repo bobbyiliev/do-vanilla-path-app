@@ -1,0 +1,13 @@
+name: repro
+
+services:
+- name: admin
+  github:
+    repo: warflash/do-vanilla-path-app
+    branch: main
+    deploy_on_push: true
+  routes:
+  - path: /admin/
+  source_dir: /
+  build_command: npm run build
+  run_command: npm run start
